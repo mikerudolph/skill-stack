@@ -107,7 +107,21 @@ The import uses [Claude Code's shared-file method](https://code.claude.com/docs/
 
 Adapt [assets/pull_request_template.md](assets/pull_request_template.md) for the selected repository host.
 For GitHub, put the result in `.github/pull_request_template.md`.
-Include the change, verification results, and STE review result.
+Include the change and verification results.
+Put the LOC table at the end of the PR description.
+Give added, removed, and net text-line counts for product code, tests, documentation, and the verification skill.
+Use the full PR diff from its merge base, not only the last commit.
+
+Include blank lines and comments in the counts.
+Count each file in one category only.
+Count verification-skill files and their supporting files in the verification-skill category, even when those files contain tests or documentation.
+Count other tests as tests and other documents as documentation.
+Count remaining implementation, configuration, and tool files as product code.
+Use zero for a category without changes.
+
+Record binary files separately in the change description because they have no text-line count.
+Keep the four category sums equal to the totals.
+
 Do not add host-specific files when the host choice is open.
 
 Add tickets, review directories, service resources, or project skills only when the task makes them necessary.
@@ -261,6 +275,8 @@ Record a project-specific term when an industry term cannot give the correct mea
 | template | Noun | A file with fields for project-specific text. Category 19. |
 | metadata | Noun | Fields with data about a skill or a different software item. Category 19. |
 | pull request | Noun | A proposal to add repository changes. Category 19. |
+| LOC | Noun | Lines of code. The PR table counts physical text lines added or removed. Category 19. |
+| merge base | Noun | The common ancestor commit used for the full PR diff. Category 19. |
 | code comment | Noun | Explanatory text in source code. Category 19. |
 | documentation string | Noun | A source-code string that gives documentation for a software interface. Category 19. |
 | decision register | Noun | The ordered decision entries in `AGENTS.md`. Category 15. |
