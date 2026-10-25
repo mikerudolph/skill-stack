@@ -5,7 +5,7 @@ description: Prepare a new repository with product goals, agent instructions, de
 
 # New repo
 
-Use the repository rules from Artifacts to prepare a new repository.
+Use this workflow to prepare a new repository.
 Keep the decision history in `AGENTS.md`.
 Add a new decision to change a previous decision.
 Do not change a recorded decision record.
@@ -78,7 +78,6 @@ Apply the same rule to product implementation.
 
 Use tools for the selected software stack.
 Select architecture, dependencies, limits, and deployment methods for the new product.
-Do not copy the Artifacts architecture into a different project.
 
 ## Prepare the repository documents
 
@@ -188,7 +187,7 @@ Use these defaults unless the user's requirements give a different choice:
 - Keep formatting, lint, complexity, and coverage limits in their tool configuration files.
 - Correct the cause of a failure. Do not change its check only to get a different result.
 - Do not add suppressions for groups of rules.
-- Select limits for this project. Do not copy limits from Artifacts without a project reason.
+- Use project code, workload, and user requirements to select limits.
 - Use tests of behavior that users can see and applicable failure cases.
 - Do not add tests only to copy implementation or increase coverage.
 - Use test resources that this task started or that the user gave to this task.
