@@ -6,11 +6,19 @@ Use Git to keep one source on each machine.
 ## Skills
 
 - [new-repo](skills/new-repo/SKILL.md): prepare repositories with product goals, agent instructions, permanent decision records, verification, and ASD-STE100 language rules.
+- [create-diagram](skills/create-diagram/SKILL.md): create technical diagrams with a fixed SVG template and PDF renderer.
 
 ## File structure
 
 ```text
 skills/
+  create-diagram/
+    SKILL.md
+    assets/
+      diagram-template.svg
+    scripts/
+      render_pdf.py
+    requirements.txt
   new-repo/
     SKILL.md
     assets/
